@@ -4,7 +4,8 @@ export default function Footer() {
     return(
         <>
             <div className="text-xl">
-                Footer
+                <div>1</div>
+                <div>2</div>
             </div>
         </>
     )
