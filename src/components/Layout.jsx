@@ -7,7 +7,9 @@ export default function Layout({children}) {
     return(
         <>
             <Header/>
-            {children}
+        <div className="text-white">
+                {children}
+            </div>
             <Footer/>
         </>
     )

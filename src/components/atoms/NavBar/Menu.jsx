@@ -8,7 +8,7 @@ export default function Menu({ buttonData }) {
                 <ul className="flex space-x-4">
                     {buttonData.map((item, index) => (
                         <li className="" key={index}>
-                            <Link to={item.link} className="text-white hover:text-gray-300">
+                            <Link to={item.link} className="text-white hover:text-blue-600">
                                 <div>{item.title}</div>
                             </Link>
                         </li>
