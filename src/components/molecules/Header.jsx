@@ -27,7 +27,7 @@ export default function Header() {
     ]
     return(
         <>
-            <div className="flex items-center justify-around p-2">
+            <div className="flex items-center justify-around p-2 bg-[#161826;]">
                 <a href="/" className="">
                     <img className="w-36" src="/logo.png" alt="logo" />
                 </a>

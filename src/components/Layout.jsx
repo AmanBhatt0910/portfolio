@@ -1,13 +1,13 @@
 import React, { Children } from "react";
 
-import Header from "./organisms/Header";
-import Footer from "./organisms/Footer";
+import Header from "./molecules/Header";
+import Footer from "./molecules/Footer";
 
 export default function Layout({children}) {
     return(
         <>
             <Header/>
-        <div className="text-white">
+            <div className="bg-[#161826;]">
                 {children}
             </div>
             <Footer/>
