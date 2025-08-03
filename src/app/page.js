@@ -1,16 +1,25 @@
-'use client'
-
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import Scene3D from '@/components/Scene3D'
+import Navbar from '@/components/layout/Navbar';
+import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Skills from '@/components/sections/Skills';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
+    <div className="min-h-screen text-gray-200 overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <Scene3D />
-      {/* Skills, Projects, Contact – coming next */}
-    </main>
-  )
+      
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      
+      <Footer />
+    </div>
+  );
 }

@@ -1,18 +1,125 @@
 @import "tailwindcss";
 
+/* CSS Variables */
 :root {
-  --color-background: #0d0d0d;
-  --color-foreground: #e0e0e0;
-  --color-primary: #c24e28;
-  --color-secondary: #d8ad63;
-  --color-accent: #ff7847;
-  --color-muted: #2e2e2e;
+  --color-dark: 15, 23, 42;
+  --color-dark-800: 30, 41, 59;
+  --color-dark-700: 51, 65, 85;
+  --color-primary: 14, 165, 233;
+  --color-secondary: 139, 92, 246;
+  --color-accent: 16, 185, 129;
 
-  --font-sans: 'Geist', sans-serif;
-  --font-mono: 'Geist Mono', monospace;
+  --gradient-primary: linear-gradient(to right, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+  --gradient-dark: linear-gradient(to bottom right, rgb(var(--color-dark)), rgb(var(--color-dark-800)));
+
+  --header-height: 80px;
+
+  --shadow-primary: 0 10px 30px -10px rgba(var(--color-primary), 0.3);
+  --shadow-secondary: 0 10px 30px -10px rgba(var(--color-secondary), 0.3);
+
+  --transition-default: all 0.3s ease;
 }
 
-body {
-  @apply bg-[var(--color-background)] text-[var(--color-foreground)] font-sans;
-  scroll-behavior: smooth;
+@layer base {
+  body {
+    background-color: rgb(var(--color-dark));
+    color: rgb(229 231 235);
+    @apply text-gray-200 overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  section {
+    @apply py-20 px-4 md:px-8;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    background: rgba(var(--color-dark-800), 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(55, 65, 81, 0.5);
+  }
+
+  .skill-card {
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card-3d {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer utilities {
+  /* Backgrounds */
+  .bg-dark       { background-color: rgb(var(--color-dark)); }
+  .bg-dark-800   { background-color: rgb(var(--color-dark-800)); }
+  .bg-dark-700   { background-color: rgb(var(--color-dark-700)); }
+  .bg-primary    { background-color: rgb(var(--color-primary)); }
+  .bg-secondary  { background-color: rgb(var(--color-secondary)); }
+  .bg-accent     { background-color: rgb(var(--color-accent)); }
+
+  /* Text */
+  .text-primary    { color: rgb(var(--color-primary)); }
+  .text-secondary  { color: rgb(var(--color-secondary)); }
+  .text-accent     { color: rgb(var(--color-accent)); }
+
+  /* Borders */
+  .border-primary       { border-color: rgb(var(--color-primary)); }
+  .border-secondary     { border-color: rgb(var(--color-secondary)); }
+
+  /* Hover border manually defined */
+  .hover\:border-primary:hover {
+    border-color: rgb(var(--color-primary));
+  }
+
+  .hover\:border-primary-50:hover {
+    border-color: rgba(var(--color-primary), 0.5);
+  }
+
+  /* Shadows */
+  .shadow-primary    { box-shadow: var(--shadow-primary); }
+  .shadow-secondary  { box-shadow: var(--shadow-secondary); }
+
+  /* Effects */
+  .glass-effect {
+    background: rgba(var(--color-dark-800), 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(55, 65, 81, 0.5);
+  }
+
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(20px); }
+  }
+
+  .animate-float         { animation: float 6s ease-in-out infinite; }
+  .animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
 }
