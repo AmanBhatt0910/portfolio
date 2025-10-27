@@ -6,7 +6,10 @@ import { projectsData } from '@/data/siteData';
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-300">
+    <section
+      id="projects"
+      className="relative py-24 px-6 md:px-12 max-w-6xl mx-auto text-gray-300"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +18,7 @@ export default function Projects() {
         className="text-3xl md:text-4xl font-bold text-center mb-16"
       >
         <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-          Featured Projects
+          Technical Projects
         </span>
       </motion.h2>
 
@@ -36,13 +39,20 @@ export default function Projects() {
                 alt={project.title}
                 className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
               />
+              <span className="absolute top-3 right-3 bg-indigo-500/20 text-indigo-300 text-xs px-2 py-1 rounded-md backdrop-blur-sm">
+                {project.date}
+              </span>
             </div>
 
             {/* Content */}
             <div className="p-6 flex flex-col justify-between h-full">
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-indigo-400">{project.title}</h3>
-                <p className="text-sm text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-indigo-400">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tech.map((t) => (
@@ -80,6 +90,7 @@ export default function Projects() {
         ))}
       </div>
 
+      {/* Decorative glow */}
       <div className="absolute -bottom-32 left-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
     </section>
   );

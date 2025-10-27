@@ -29,40 +29,43 @@ export const skillsData = [
   },
 ];
 
-
-export const projectsData = [
-  {
-    title: 'Portfolio Website',
-    description:
-      'A modern personal portfolio built with Next.js, React, and Tailwind CSS. Features smooth animations, responsive design, and dark mode.',
-    tech: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
-    github: 'https://github.com/yourusername/portfolio',
-    demo: 'https://yourportfolio.vercel.app/',
-    image: '/projects/portfolio.png',
-  },
-  {
-    title: 'Chat App',
-    description:
-      'A real-time chat application with Socket.io and Node.js. Includes authentication, chat rooms, and online user tracking.',
-    tech: ['React', 'Node.js', 'Socket.io', 'Express'],
-    github: 'https://github.com/yourusername/chat-app',
-    demo: 'https://chatapp-demo.vercel.app/',
-    image: '/projects/chatapp.png',
-  },
-  {
-    title: 'E-Commerce Store',
-    description:
-      'Full-stack e-commerce website with product filtering, Stripe payments, and dashboard analytics.',
-    tech: ['Next.js', 'MongoDB', 'Stripe API', 'TailwindCSS'],
-    github: 'https://github.com/yourusername/ecommerce',
-    demo: 'https://ecommerce-demo.vercel.app/',
-    image: '/projects/ecommerce.png',
-  },
-];
-
 export const contactData = {
   email: "aman.bhatt@example.com",
   phone: "+91 90454 11893",
   linkedin: "https://www.linkedin.com/in/aman-bhatt-146a9a257/",
   github: "https://github.com/AmanBhatt0910",
 };
+
+
+export const projectsData = [
+  {
+    title: 'FlexiLang - Multi-Language Cross Compiler',
+    description:
+      'A full-stack code translation platform built with Next.js and Express.js, enabling JavaScript-to-Python conversion with over 95% accuracy. Includes JWT authentication and RESTful APIs with MongoDB for user and translation tracking.',
+    tech: ['Next.js', 'Express.js', 'MongoDB', 'JWT'],
+    github: 'https://github.com/AmanBhatt0910/FlexiLang',
+    demo: 'https://flexi-lang.vercel.app/',
+    date: 'April 2025',
+    image: '/projects/flexilang.png',
+  },
+  {
+    title: 'SpendSense - Expenditure Management',
+    description:
+      'Expense tracking web app built using React.js and Spring Boot, featuring secure REST APIs, MySQL data persistence, and real-time financial analytics. Achieved 20% faster query response for financial operations.',
+    tech: ['React.js', 'Spring Boot', 'MySQL', 'Hibernate'],
+    github: 'https://github.com/AmanBhatt0910/SpendSense',
+    demo: 'https://spend-sense-rho.vercel.app/',
+    date: 'November 2024',
+    image: '/projects/spendsense.png',
+  },
+  {
+    title: 'ConnectNow - Real-Time Chat Application',
+    description:
+      'A scalable chat app powered by Next.js and MongoDB, supporting 500+ concurrent users with NextAuth.js authentication, Pusher WebSocket integration, and optimized Cloudinary media uploads (40% faster).',
+    tech: ['Next.js', 'NextAuth.js', 'MongoDB', 'Pusher', 'Cloudinary'],
+    github: 'https://github.com/AmanBhatt0910/ConnectNow',
+    demo: '#',
+    date: 'May 2024',
+    image: '/projects/connectnow.png',
+  },
+];

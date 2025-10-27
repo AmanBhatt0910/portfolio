@@ -33,7 +33,7 @@ export default function About() {
           className="relative w-44 h-44 rounded-full overflow-hidden border-2 border-indigo-500/30 shadow-xl shadow-indigo-500/20"
         >
           <Image
-            src="/profile.jpg" // <- replace this with your actual image path
+            src="/profile-pic.jpg" // <- replace this with your actual image path
             alt="Aman"
             fill
             className="object-cover grayscale hover:grayscale-0 transition-all duration-500"

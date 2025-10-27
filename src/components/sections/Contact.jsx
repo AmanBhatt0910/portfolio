@@ -66,8 +66,8 @@ export default function Contact() {
       ),
       title: 'Email Me',
       description: 'Drop me a line anytime',
-      value: 'aman.bhatt@example.com',
-      href: 'mailto:aman.bhatt@example.com',
+      value: 'amanbhatt0910@gmail.com',
+      href: 'mailto:amanbhatt0910@gmail.com',
       color: 'from-indigo-500 to-cyan-400',
     },
     {
@@ -88,8 +88,8 @@ export default function Contact() {
       ),
       title: 'Call Me',
       description: "Let's have a conversation",
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
+      value: '+91 90454 11893',
+      href: 'tel:+919045411893',
       color: 'from-cyan-500 to-indigo-400',
     },
     {
@@ -105,7 +105,7 @@ export default function Contact() {
       title: 'LinkedIn',
       description: 'Connect professionally',
       value: 'linkedin.com/in/amanbhatt',
-      href: 'https://linkedin.com/in/amanbhatt',
+      href: 'https://www.linkedin.com/in/aman-bhatt-146a9a257/',
       color: 'from-indigo-400 to-cyan-400',
     },
   ];
