@@ -77,7 +77,7 @@ export default function About() {
               <i className="fa-brands fa-github text-xl"></i>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/amanbhatt0910/"
               target="_blank"
               className="text-gray-400 hover:text-indigo-400 transition-all"
             >

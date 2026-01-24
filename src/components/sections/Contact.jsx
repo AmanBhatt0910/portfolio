@@ -105,7 +105,7 @@ export default function Contact() {
       title: 'LinkedIn',
       description: 'Connect professionally',
       value: 'linkedin.com/in/amanbhatt',
-      href: 'https://www.linkedin.com/in/aman-bhatt-146a9a257/',
+      href: 'https://www.linkedin.com/in/amanbhatt0910/',
       color: 'from-indigo-400 to-cyan-400',
     },
   ];

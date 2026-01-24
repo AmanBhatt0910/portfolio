@@ -16,6 +16,6 @@ export const projectsData = [
 export const contactData = {
   email: "aman.bhatt@example.com",
   phone: "+91 90454 11893",
-  linkedin: "https://www.linkedin.com/in/aman-bhatt-146a9a257/",
+  linkedin: "https://www.linkedin.com/in/amanbhatt0910/",
   github: "https://github.com/AmanBhatt0910",
 };
