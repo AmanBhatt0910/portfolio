@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/* ============================================
+   EMBER & OBSIDIAN — Custom Theme
+   ============================================ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 24 10% 10%;
+  --surface: 0 0% 96%;
+  --surface-alt: 0 0% 92%;
+  --border: 0 0% 86%;
+  --muted: 240 4% 46%;
+  --muted-foreground: 240 4% 46%;
+  --accent: 25 95% 53%;
+  --accent-hover: 25 97% 62%;
+  --accent-muted: 25 95% 53% / 0.1;
+  --accent-foreground: 0 0% 100%;
+  --card: 0 0% 96%;
+  --card-foreground: 24 10% 10%;
+  --ring: 25 95% 53%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 240 6% 4%;
+  --foreground: 40 6% 97%;
+  --surface: 240 5% 8%;
+  --surface-alt: 240 4% 12%;
+  --border: 240 4% 18%;
+  --muted: 240 5% 46%;
+  --muted-foreground: 240 5% 46%;
+  --accent: 25 95% 53%;
+  --accent-hover: 25 97% 62%;
+  --accent-muted: 25 95% 53% / 0.1;
+  --accent-foreground: 0 0% 100%;
+  --card: 240 5% 8%;
+  --card-foreground: 40 6% 97%;
+  --ring: 25 95% 53%;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: hsl(25 95% 53% / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted));
+  }
+}
+
+/* ============================================
+   THEME UTILITIES
+   ============================================ */
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-surface: hsl(var(--surface));
+  --color-surface-alt: hsl(var(--surface-alt));
+  --color-border: hsl(var(--border));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-hover: hsl(var(--accent-hover));
+  --color-accent-muted: hsl(var(--accent-muted));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-ring: hsl(var(--ring));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+}
+
+/* ============================================
+   COMPONENT UTILITIES
+   ============================================ */
+
+@utility accent-glow {
+  box-shadow: 0 0 20px hsl(25 95% 53% / 0.15), 0 0 60px hsl(25 95% 53% / 0.05);
+}
+
+@utility accent-glow-strong {
+  box-shadow: 0 0 30px hsl(25 95% 53% / 0.25), 0 0 80px hsl(25 95% 53% / 0.1);
+}
+
+@utility glass {
+  background: hsl(var(--surface) / 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@utility gradient-text {
+  background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-hover)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
